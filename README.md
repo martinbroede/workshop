@@ -9,11 +9,11 @@ und einige Gegenstände zurücklassen. Von allen Ausstellungsstücken kennst du 
 
 ## Aufgabenstellung
 
-Gegeben ist ein Rucksack mit einem maximalen Gewicht von 25kg. Es gibt 40 Gegenstände, die in den Rucksack gepackt werden können. Jeder Gegenstand hat ein Gewicht und einen Wert. Es soll eine Auswahl getroffen werden, welche Gegenstände in den Rucksack gepackt werden, sodass der Gesamtwert der Gegenstände maximal ist und das Gewicht nicht überschritten wird.
+Gegeben ist ein Rucksack mit einem maximalen Gewicht von 25kg. Es gibt 100 Gegenstände, die in den Rucksack gepackt werden können. Jeder Gegenstand hat ein Gewicht und einen Wert. Es soll eine Auswahl getroffen werden, welche Gegenstände in den Rucksack gepackt werden, sodass der Gesamtwert der Gegenstände maximal ist und das Gewicht nicht überschritten wird.
 
 ## Die Ausstellungstücke
 
-Die Ausstellungsstücke des Museums mit ihren Werten und Gewichten sind in der Datei `values.json` codiert. Die Datei enthält eine Liste von 40 Gegenständen. Jeder Gegenstand ist ein Tupel, das aus drei Werten besteht: seinem Gewicht, seinem Wert und seiner Nummer. Die Nummer ist die Position des Gegenstandes in der Liste. Die Liste hat diese Struktur:
+Die Ausstellungsstücke des Museums mit ihren Werten und Gewichten sind in der Datei `values.json` codiert. Die Datei enthält eine Liste von 100 Gegenständen. Jeder Gegenstand ist ein Tupel, das aus drei Werten besteht: seinem Gewicht, seinem Wert und seiner Nummer. Die Nummer ist die Position des Gegenstandes in der Liste. Die Liste hat diese Struktur:
 
 
 ```json
