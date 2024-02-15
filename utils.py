@@ -122,7 +122,7 @@ def items_to_indexes(iterable: list[Item]) -> list:
     return [item.index for item in iterable]
 
 
-assert (hash(TUPLES) == -67994512788271461), "The order, weight or value of at least one of the items has changed"
+assert (hash(TUPLES) == -7015908621320116923), "The order, weight or value of at least one of the items has changed"
 
 if __name__ == "__main__":
     ITEMS = to_items(TUPLES)
@@ -130,8 +130,9 @@ if __name__ == "__main__":
     assert weight((1, 2, 3)) == weight((ITEMS[1], ITEMS[2], ITEMS[3]))
     assert profit((1, 2, 3)) == profit((ITEMS[1], ITEMS[2], ITEMS[3]))
 
-    assert real_profit((22, 23, 24, 25, 26, 27, 28, 29)) == 0
-    assert real_profit((ITEMS[22], ITEMS[23], ITEMS[24], ITEMS[25], ITEMS[26], ITEMS[27], ITEMS[28], ITEMS[29])) == 0
+    assert real_profit((22, 23, 24, 25, 26, 27, 28, NUMBER_OF_VALUES-1)) == 0
+    assert real_profit((ITEMS[22], ITEMS[23], ITEMS[24], ITEMS[25], ITEMS[26],
+                       ITEMS[27], ITEMS[28], ITEMS[NUMBER_OF_VALUES-1])) == 0
 
-    assert profit((22, 23, 24, 25, 26, 27, 28, 29)) == profit((
-        ITEMS[22], ITEMS[23], ITEMS[24], ITEMS[25], ITEMS[26], ITEMS[27], ITEMS[28], ITEMS[29])) > 0
+    assert profit((22, 23, 24, 25, 26, 27, 28, NUMBER_OF_VALUES-1)) == profit((
+        ITEMS[22], ITEMS[23], ITEMS[24], ITEMS[25], ITEMS[26], ITEMS[27], ITEMS[28], ITEMS[NUMBER_OF_VALUES-1])) > 0
