@@ -1,5 +1,4 @@
-from utils import (CAPACITY, NUMBER_OF_VALUES, TUPLES, VALUES, WEIGHTS,
-                   items_to_indexes, profit, real_profit, to_items, weight)
+from utils import *
 
 gegenstände = to_items(TUPLES)
 leichter_rucksack = [0, 1, 2]

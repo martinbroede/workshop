@@ -99,3 +99,9 @@ Ihr könnt gemeinsam Ideen sammeln, wie ihr das Problem am besten löst.
 ## Hinweis
 
 Wenn du glaubst, dass du keinen höheren Profit mehr erzielen kannst, dann versuche, deinen Code zu beschleunigen.
+
+## Variante (schwieriger!)
+
+Wenn du die optimale Lösung für das Rucksackproblem mit ganzen Zahlen gefunden hast, versuche,
+eine Lösung für das Rucksackproblem mit Fließkommazahlen zu finden.
+Setze dazu in der Datei `utils.py` die Variable `INTEGER` auf `False`.

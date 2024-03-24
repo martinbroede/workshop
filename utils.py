@@ -3,8 +3,9 @@ from typing import Iterable
 
 # globals ##############################################################################################################
 
+INTEGER = True  # setze auf False, um die schwierigere Variante des Problems mit Fließkommazahlen zu bearbeiten
 
-__FILE_NAME = "values.json"
+__FILE_NAME = "values.json" if INTEGER else "values-float.json"
 
 __knapsack = {}
 
@@ -26,8 +27,8 @@ WEIGHTS = [v[0] for v in TUPLES]
 
 
 class Item:
-    weight: int
-    value: int
+    weight: int | float
+    value: int | float
     index: int
 
     def __init__(self, args):
@@ -122,8 +123,6 @@ def items_to_indexes(iterable: list[Item]) -> list:
     return [item.index for item in iterable]
 
 
-assert (hash(TUPLES) == -7015908621320116923), "The order, weight or value of at least one of the items has changed"
-
 if __name__ == "__main__":
     ITEMS = to_items(TUPLES)
 
@@ -134,5 +133,5 @@ if __name__ == "__main__":
     assert real_profit((ITEMS[22], ITEMS[23], ITEMS[24], ITEMS[25], ITEMS[26],
                        ITEMS[27], ITEMS[28], ITEMS[NUMBER_OF_VALUES-1])) == 0
 
-    assert profit((22, 23, 24, 25, 26, 27, 28, NUMBER_OF_VALUES-1)) == profit((
-        ITEMS[22], ITEMS[23], ITEMS[24], ITEMS[25], ITEMS[26], ITEMS[27], ITEMS[28], ITEMS[NUMBER_OF_VALUES-1])) > 0
+    assert profit((22, 23, 24, 25, 26, 27, 28)) == profit((
+        ITEMS[22], ITEMS[23], ITEMS[24], ITEMS[25], ITEMS[26], ITEMS[27], ITEMS[28]))
